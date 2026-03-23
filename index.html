@@ -15,47 +15,44 @@
         }
         body { margin: 0; font-family: 'Segoe UI', system-ui, sans-serif; background: var(--fundo); display: flex; flex-direction: column; align-items: center; color: var(--texto); line-height: 1.6; padding-bottom: 100px; }
         
-        /* HEADER PREMIUM */
         header { width: 100%; background: var(--marinho); padding: 30px 0; display: flex; flex-direction: column; align-items: center; border-bottom: 4px solid var(--dourado); text-align: center; }
         .logo-topo { width: 70%; max-width: 320px; height: auto; margin-bottom: 15px; }
         .titulo-dourado { color: var(--dourado); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1.5px; max-width: 85%; }
 
-        /* FAIXA DE ROLAGEM SIMPLIFICADA */
         .faixa-rolagem { width: 100%; background: #071222; color: var(--dourado); overflow: hidden; white-space: nowrap; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .faixa-content { display: inline-block; animation: scroll 30s linear infinite; }
+        .faixa-content { display: inline-block; animation: scroll 40s linear infinite; }
         .faixa-content span { display: inline-block; padding: 0 20px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; }
         @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-        /* CONTAINER E CARD SOBRE MIM */
         .container { width: 92%; max-width: 450px; }
-        .sobre-mim { background: white; padding: 25px; border-radius: 25px; margin-top: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; }
+
+        .perfil-topo { background: white; padding: 25px; border-radius: 25px; margin-top: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; }
         .foto-perfil-wrapper { width: 125px; height: 125px; border-radius: 50%; border: 3px solid var(--dourado); margin: -65px auto 15px auto; overflow: hidden; background: white; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
         .foto-perfil-wrapper img { width: 100%; height: 100%; object-fit: cover; }
-        .sobre-mim h2 { margin: 0; color: var(--marinho); font-size: 1.4rem; }
+        .perfil-topo h2 { margin: 0; color: var(--marinho); font-size: 1.4rem; }
         .subtitulo-dourado { color: var(--dourado); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; display: block; margin-bottom: 15px; }
-        
-        .historia-texto { text-align: left; font-size: 0.9rem; color: var(--texto); border-top: 1px solid #f1f5f9; padding-top: 15px; }
-        .formacao-lista { list-style: none; padding: 0; margin: 15px 0; font-size: 0.85rem; text-align: left; }
-        .formacao-lista li { margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px; }
 
-        /* BOTÕES */
+        /* SEÇÃO SOBRE MIM */
+        .sobre-container { background: white; border-radius: 25px; overflow: hidden; margin-top: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .sobre-imagem img { width: 100%; height: auto; display: block; }
+        .sobre-conteudo { padding: 25px; text-align: left; }
+        .sobre-conteudo p { font-size: 0.95rem; color: var(--texto); margin-bottom: 15px; line-height: 1.6; }
+        .sobre-conteudo b { color: var(--marinho); }
+
         .btn { display: flex; align-items: center; justify-content: center; text-decoration: none; padding: 18px; border-radius: 18px; font-weight: 700; transition: 0.3s; gap: 12px; margin-bottom: 12px; font-size: 1rem; border: none; }
-        .btn-whats { background: var(--whats); color: white; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2); margin-top: 10px; }
-        .btn-secondary { background: white; color: var(--marinho); border: 1px solid #e2e8f0; font-size: 0.9rem; }
+        .btn-whats { background: var(--whats); color: white; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2); }
 
-        /* SEÇÕES DE SERVIÇOS */
         .section-title { font-size: 0.8rem; font-weight: 800; color: var(--marinho); text-transform: uppercase; margin: 35px 0 15px 5px; display: flex; align-items: center; gap: 10px; }
         .section-title::after { content: ""; flex: 1; height: 1px; background: #cbd5e1; }
         
         .grid-servicos { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
         .item-servico { background: white; padding: 15px; border-radius: 15px; font-size: 0.75rem; font-weight: 600; border: 1px solid #e2e8f0; text-align: center; color: var(--marinho); }
+        .item-servico-full { grid-column: span 2; border-color: var(--dourado); background: #fffdf9; font-size: 0.85rem; }
 
-        /* BLOCO DE EXAMES E PROCEDIMENTOS */
         .bloco-procedimentos { background: var(--marinho); color: white; padding: 25px; border-radius: 20px; margin-top: 15px; border-bottom: 5px solid var(--dourado); }
-        .bloco-procedimentos p { margin: 8px 0; font-size: 0.9rem; display: flex; align-items: center; gap: 10px; }
+        .bloco-procedimentos p { margin: 12px 0; font-size: 0.9rem; display: flex; align-items: center; gap: 10px; line-height: 1.4; }
         .check-icon { color: var(--dourado); font-weight: bold; }
 
-        /* FLOAT WHATS */
         .float-w { position: fixed; bottom: 25px; right: 25px; background: var(--whats); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 999; text-decoration: none; }
     </style>
 </head>
@@ -68,53 +65,50 @@
 
     <div class="faixa-rolagem">
         <div class="faixa-content">
-            <span>Check-up de Excelência</span> <span>•</span> <span>Cateterismo</span> <span>•</span> <span>Angioplastia</span> <span>•</span> <span>Mapa 24h</span> <span>•</span> <span>Holter 24h</span> <span>•</span>
-            <span>Check-up de Excelência</span> <span>•</span> <span>Cateterismo</span> <span>•</span> <span>Angioplastia</span> <span>•</span> <span>Mapa 24h</span> <span>•</span> <span>Holter 24h</span> <span>•</span>
+            <span>Check-up Cardiológico</span> <span>•</span> <span>Cateterismo Cardíaco</span> <span>•</span> <span>Angioplastia</span> <span>•</span> <span>Mapa 24h</span> <span>•</span> <span>Holter 24h</span> <span>•</span> <span>Consulta Cardiológica</span> <span>•</span> <span>Doença Coronária e Angina</span> <span>•</span> <span>Arritmia</span> <span>•</span> <span>Dislipidemias</span> <span>•</span>
+            <span>Check-up Cardiológico</span> <span>•</span> <span>Cateterismo Cardíaco</span> <span>•</span> <span>Angioplastia</span> <span>•</span> <span>Mapa 24h</span> <span>•</span> <span>Holter 24h</span> <span>•</span> <span>Consulta Cardiológica</span> <span>•</span> <span>Doença Coronária e Angina</span> <span>•</span> <span>Arritmia</span> <span>•</span> <span>Dislipidemias</span> <span>•</span>
         </div>
     </div>
 
     <div class="container">
         
-        <div class="sobre-mim">
+        <div class="perfil-topo">
             <div class="foto-perfil-wrapper"><img src="perfil.png" alt="Dr. Gabriel Mendonça"></div>
             <h2>Dr. Gabriel Mendonça</h2>
             <span class="subtitulo-dourado">Cardiologia Clínica e Intervencionista</span>
-            
-            <div class="historia-texto">
-                <p>Saiba mais sobre mim: Nascido em São Bernardo do Campo, mas com raízes e coração fincados no Nordeste.</p>
-                <ul class="formacao-lista">
-                    <li><span>🎓</span> Medicina: FAMENE (João Pessoa)</li>
-                    <li><span>🏥</span> Clínica Médica: HUWC / UFC</li>
-                    <li><span>🫀</span> Cardiologia: PROCAPE / UPE</li>
-                    <li><span>🩺</span> Hemodinâmica e Intervenção: PROCAPE / UPE</li>
-                </ul>
-            </div>
-
-            <a href="https://wa.me/558835231180" class="btn btn-whats">📅 Agendar Consulta Particular</a>
+            <a href="https://wa.me/558835231180" class="btn btn-whats">Agendar Consulta Particular</a>
         </div>
 
-        <div class="section-title">O que tratamos</div>
+        <div class="section-title">Saiba mais sobre mim</div>
+        <div class="sobre-container">
+            <div class="sobre-imagem"><img src="Foto-71.png" alt="Dr. Gabriel Mendonça"></div>
+            <div class="sobre-conteudo">
+                <p>Nascido em São Bernardo do Campo, mas com as raízes e o coração fincados no Nordeste. Minha jornada na medicina é guiada pela missão de unir o <b>acolhimento humano</b> à precisão da <b>alta tecnologia cardiovascular</b>.</p>
+                <p>Formado em Medicina em João Pessoa (FAMENE), segui para o Ceará para a Residência em Clínica Médica no renomado Hospital Universitário Walter Cantídio (UFC).</p>
+                <p>Minha especialização em Cardiologia e, posteriormente, em <b>Hemodinâmica e Cardiologia Intervencionista</b>, foi consolidada no <b>PROCAPE (Recife)</b>, uma das maiores referências do nordeste. Hoje, trago toda essa bagagem técnica para cuidar da saúde do seu coração aqui no Cariri.</p>
+            </div>
+        </div>
+
+        <div class="section-title">Serviços e Tratamentos</div>
         <div class="grid-servicos">
+            <div class="item-servico item-servico-full">⭐ <b>Consulta Cardiológica Completa</b></div>
             <div class="item-servico">🫀 Insuficiência Cardíaca</div>
             <div class="item-servico">💓 Valvopatias</div>
-            <div class="item-servico">🩹 Doença Coronária</div>
+            <div class="item-servico">🩹 Doença Coronária e Angina</div>
             <div class="item-servico">🩺 Check-up Preventivo</div>
-            <div class="item-servico">⚡ Arritmias e Angina</div>
+            <div class="item-servico">⚡ Arritmias</div>
             <div class="item-servico">📋 Parecer Cardiológico</div>
         </div>
 
         <div class="section-title">Exames e Procedimentos</div>
         <div class="bloco-procedimentos">
-            <p><span class="check-icon">✓</span> MAPA 24h e Holter 24h</p>
+            <p><span class="check-icon">✓</span> MAPA 24h, Holter 24h e Eletrocardiograma</p>
+            <p><span class="check-icon">✓</span> Dislipidemias (Colesterol)</p>
             <p><span class="check-icon">✓</span> Cateterismo Cardíaco</p>
-            <p><span class="check-icon">✓</span> Angioplastia Coronária com Stent</p>
+            <p style="padding-left: 25px; font-size: 0.85rem; opacity: 0.9;">• Angioplastia Coronariana</p>
         </div>
 
-        <div class="section-title">Acompanhe</div>
-        <a href="https://www.instagram.com/gabriel.cardiologista" class="btn btn-secondary">📸 Instagram Profissional</a>
-        <a href="ampa.pdf" class="btn btn-secondary">📥 Tabela de AMPA (PDF)</a>
-
-        <div style="text-align:center; padding: 30px 0; font-size: 0.7rem; color: #94a3b8; line-height: 1.8;">
+        <div style="text-align:center; padding: 40px 0; font-size: 0.7rem; color: #94a3b8; line-height: 1.8;">
             <strong style="color: var(--marinho); font-size: 0.8rem;">Dr. Gabriel Mendonça</strong><br>
             CRM-CE 21.346 | RQE 18.841 | RQE 18.980<br>
             CRM-PE 32.651 | RQE 15.605 | RQE 19.051<br>
