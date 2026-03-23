@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Gabriel Mendonça - Cardiologia e Hemodinâmica</title>
+    <title>Dr. Gabriel Mendonça - Cardiologia Clínica e Hemodinâmica</title>
     <style>
         :root { 
             --marinho: #0a192f; 
@@ -18,40 +18,42 @@
         /* HEADER PREMIUM */
         header { width: 100%; background: var(--marinho); padding: 30px 0; display: flex; flex-direction: column; align-items: center; border-bottom: 4px solid var(--dourado); text-align: center; }
         .logo-topo { width: 70%; max-width: 320px; height: auto; margin-bottom: 15px; }
-        .headline-premium { color: var(--branco); font-size: 1rem; font-weight: 300; max-width: 85%; letter-spacing: 0.5px; opacity: 0.9; }
-        .headline-premium b { color: var(--dourado); font-weight: 700; }
+        .titulo-dourado { color: var(--dourado); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1.5px; max-width: 85%; }
 
-        /* FAIXA DE ROLAGEM ESTILO PNEUMO */
+        /* FAIXA DE ROLAGEM SIMPLIFICADA */
         .faixa-rolagem { width: 100%; background: #071222; color: var(--dourado); overflow: hidden; white-space: nowrap; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .faixa-content { display: inline-block; animation: scroll 30s linear infinite; }
         .faixa-content span { display: inline-block; padding: 0 20px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; }
         @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-        /* PERFIL E SOBRE */
+        /* CONTAINER E CARD SOBRE MIM */
         .container { width: 92%; max-width: 450px; }
         .sobre-mim { background: white; padding: 25px; border-radius: 25px; margin-top: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; }
-        .foto-perfil-wrapper { width: 120px; height: 120px; border-radius: 50%; border: 3px solid var(--dourado); margin: -60px auto 15px auto; overflow: hidden; background: white; }
+        .foto-perfil-wrapper { width: 125px; height: 125px; border-radius: 50%; border: 3px solid var(--dourado); margin: -65px auto 15px auto; overflow: hidden; background: white; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
         .foto-perfil-wrapper img { width: 100%; height: 100%; object-fit: cover; }
         .sobre-mim h2 { margin: 0; color: var(--marinho); font-size: 1.4rem; }
-        .sobre-mim .formacao { color: var(--dourado); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 15px; display: block; }
-        .sobre-mim p { font-size: 0.9rem; color: var(--texto); margin-bottom: 20px; }
+        .subtitulo-dourado { color: var(--dourado); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; display: block; margin-bottom: 15px; }
+        
+        .historia-texto { text-align: left; font-size: 0.9rem; color: var(--texto); border-top: 1px solid #f1f5f9; padding-top: 15px; }
+        .formacao-lista { list-style: none; padding: 0; margin: 15px 0; font-size: 0.85rem; text-align: left; }
+        .formacao-lista li { margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px; }
 
         /* BOTÕES */
         .btn { display: flex; align-items: center; justify-content: center; text-decoration: none; padding: 18px; border-radius: 18px; font-weight: 700; transition: 0.3s; gap: 12px; margin-bottom: 12px; font-size: 1rem; border: none; }
-        .btn-whats { background: var(--whats); color: white; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2); }
-        .btn-secondary { background: white; color: var(--marinho); border: 1px solid #e2e8f0; }
+        .btn-whats { background: var(--whats); color: white; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2); margin-top: 10px; }
+        .btn-secondary { background: white; color: var(--marinho); border: 1px solid #e2e8f0; font-size: 0.9rem; }
 
-        /* SEÇÕES */
+        /* SEÇÕES DE SERVIÇOS */
         .section-title { font-size: 0.8rem; font-weight: 800; color: var(--marinho); text-transform: uppercase; margin: 35px 0 15px 5px; display: flex; align-items: center; gap: 10px; }
         .section-title::after { content: ""; flex: 1; height: 1px; background: #cbd5e1; }
         
         .grid-servicos { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-        .item-servico { background: white; padding: 15px; border-radius: 15px; font-size: 0.75rem; font-weight: 600; border: 1px solid #e2e8f0; text-align: center; }
+        .item-servico { background: white; padding: 15px; border-radius: 15px; font-size: 0.75rem; font-weight: 600; border: 1px solid #e2e8f0; text-align: center; color: var(--marinho); }
 
-        /* DESTAQUE HEMODINÂMICA */
-        .destaque-hemo { background: var(--marinho); color: white; padding: 25px; border-radius: 20px; margin-top: 15px; text-align: center; border-bottom: 5px solid var(--dourado); }
-        .destaque-hemo h3 { color: var(--dourado); margin: 0 0 10px 0; font-size: 1rem; }
-        .destaque-hemo p { font-size: 0.85rem; opacity: 0.9; margin: 0; }
+        /* BLOCO DE EXAMES E PROCEDIMENTOS */
+        .bloco-procedimentos { background: var(--marinho); color: white; padding: 25px; border-radius: 20px; margin-top: 15px; border-bottom: 5px solid var(--dourado); }
+        .bloco-procedimentos p { margin: 8px 0; font-size: 0.9rem; display: flex; align-items: center; gap: 10px; }
+        .check-icon { color: var(--dourado); font-weight: bold; }
 
         /* FLOAT WHATS */
         .float-w { position: fixed; bottom: 25px; right: 25px; background: var(--whats); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 999; text-decoration: none; }
@@ -61,13 +63,13 @@
 
     <header>
         <img src="fundo.jpg" alt="Logo Dr. Gabriel Mendonça" class="logo-topo">
-        <div class="headline-premium">Especialista em Cardiologia e <b>Hemodinâmica</b></div>
+        <div class="titulo-dourado">Especialista em Cardiologia Clínica e Hemodinâmica</div>
     </header>
 
     <div class="faixa-rolagem">
         <div class="faixa-content">
-            <span>Atendimento em Crato-CE</span> <span>•</span> <span>Cateterismo Cardíaco</span> <span>•</span> <span>Acompanhamento Hospitalar</span> <span>•</span> <span>Angioplastia com Stent</span> <span>•</span> <span>Check-up de Excelência</span> <span>•</span>
-            <span>Atendimento em Crato-CE</span> <span>•</span> <span>Cateterismo Cardíaco</span> <span>•</span> <span>Acompanhamento Hospitalar</span> <span>•</span> <span>Angioplastia com Stent</span> <span>•</span> <span>Check-up de Excelência</span> <span>•</span>
+            <span>Check-up de Excelência</span> <span>•</span> <span>Cateterismo</span> <span>•</span> <span>Angioplastia</span> <span>•</span> <span>Mapa 24h</span> <span>•</span> <span>Holter 24h</span> <span>•</span>
+            <span>Check-up de Excelência</span> <span>•</span> <span>Cateterismo</span> <span>•</span> <span>Angioplastia</span> <span>•</span> <span>Mapa 24h</span> <span>•</span> <span>Holter 24h</span> <span>•</span>
         </div>
     </div>
 
@@ -76,32 +78,47 @@
         <div class="sobre-mim">
             <div class="foto-perfil-wrapper"><img src="perfil.png" alt="Dr. Gabriel Mendonça"></div>
             <h2>Dr. Gabriel Mendonça</h2>
-            <span class="formacao">PROCAPE / UPE</span>
-            <p>Unindo a cardiologia clínica à alta tecnologia da intervenção cardiovascular para cuidar de cada detalhe do seu coração.</p>
+            <span class="subtitulo-dourado">Cardiologia Clínica e Intervencionista</span>
+            
+            <div class="historia-texto">
+                <p>Saiba mais sobre mim: Nascido em São Bernardo do Campo, mas com raízes e coração fincados no Nordeste.</p>
+                <ul class="formacao-lista">
+                    <li><span>🎓</span> Medicina: FAMENE (João Pessoa)</li>
+                    <li><span>🏥</span> Clínica Médica: HUWC / UFC</li>
+                    <li><span>🫀</span> Cardiologia: PROCAPE / UPE</li>
+                    <li><span>🩺</span> Hemodinâmica e Intervenção: PROCAPE / UPE</li>
+                </ul>
+            </div>
+
             <a href="https://wa.me/558835231180" class="btn btn-whats">📅 Agendar Consulta Particular</a>
         </div>
 
-        <div class="section-title">Especialidades</div>
+        <div class="section-title">O que tratamos</div>
         <div class="grid-servicos">
-            <div class="item-servico">🩺 Check-up Geral</div>
-            <div class="item-servico">💓 Arritmias</div>
-            <div class="item-servico">🩸 Colesterol</div>
             <div class="item-servico">🫀 Insuficiência Cardíaca</div>
+            <div class="item-servico">💓 Valvopatias</div>
+            <div class="item-servico">🩹 Doença Coronária</div>
+            <div class="item-servico">🩺 Check-up Preventivo</div>
+            <div class="item-servico">⚡ Arritmias e Angina</div>
+            <div class="item-servico">📋 Parecer Cardiológico</div>
         </div>
 
-        <div class="destaque-hemo">
-            <h3>Procedimentos Complexos</h3>
-            <p>Realização de <b>Cateterismo e Angioplastia</b> com suporte hospitalar e tecnologia de ponta.</p>
+        <div class="section-title">Exames e Procedimentos</div>
+        <div class="bloco-procedimentos">
+            <p><span class="check-icon">✓</span> MAPA 24h e Holter 24h</p>
+            <p><span class="check-icon">✓</span> Cateterismo Cardíaco</p>
+            <p><span class="check-icon">✓</span> Angioplastia Coronária com Stent</p>
         </div>
 
-        <div class="section-title">Links Úteis</div>
+        <div class="section-title">Acompanhe</div>
         <a href="https://www.instagram.com/gabriel.cardiologista" class="btn btn-secondary">📸 Instagram Profissional</a>
         <a href="ampa.pdf" class="btn btn-secondary">📥 Tabela de AMPA (PDF)</a>
 
-        <div style="text-align:center; padding: 30px 0; font-size: 0.7rem; color: #94a3b8;">
-            <strong>Dr. Gabriel Mendonça</strong><br>
+        <div style="text-align:center; padding: 30px 0; font-size: 0.7rem; color: #94a3b8; line-height: 1.8;">
+            <strong style="color: var(--marinho); font-size: 0.8rem;">Dr. Gabriel Mendonça</strong><br>
             CRM-CE 21.346 | RQE 18.841 | RQE 18.980<br>
-            © 2026 | Juazeiro do Norte & Crato
+            CRM-PE 32.651 | RQE 15.605 | RQE 19.051<br>
+            © 2026 | Crato & Juazeiro do Norte
         </div>
     </div>
 
